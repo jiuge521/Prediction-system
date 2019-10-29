@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.mapper.PMDataMapper">
+
+    <insert id="save" parameterType="PMData">
+        insert into pm_info values (#{city},#{PM25},#{AQI},#{quality},#{PM10},#{CO},#{NO2},#{O3},#{SO2},#{time})
+    </insert>
+    <select id="findOne" resultType="PMData">
+        select * from pm_info p order by p.time desc limit 1
+    </select>
+
+</mapper>

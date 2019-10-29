@@ -1,0 +1,11 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    username: root
+    password: 123
+    url: jdbc:mysql:///pm25?serverTimezone=GMT
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.itheima.domain
